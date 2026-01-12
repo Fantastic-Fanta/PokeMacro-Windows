@@ -1,0 +1,52 @@
+# Your username (display name)
+Username: ""
+
+# Discord webhook URL (optional - leave empty to skip webhook notifications)
+DiscordWebhook: ""
+
+# PokeMacro Configs
+Wishlist:
+  Reskins:
+    - "Whiteout"
+    - "Phantom"
+    - "Glitch"
+  Gradients:
+    - "Gaia"
+    - "Chronos"
+    - "Peppermint"
+    - "Nativity"
+    - "Helios"
+    - "Eos"
+    - "Aether"
+    - "Nereus"
+    - "Nyx"
+    - "Frostbite"
+    - "Winter"
+
+# Positions to change, 1920x1080
+Positions:
+  TitleFiller: [1360, 277]
+  Continue: [840, 507]
+  EggManPosition: [1238, 615]
+  DialogueYES: [1493, 390]
+  QuickRejoinSprite: [1883, 944]
+  QuickRejoinButton: [1057, 614]
+  MenuButton: [21, 438]
+  SaveButton: [74, 757]
+
+
+# Chat Window (for ocr region)
+ChatWindow:
+  LeftCorner: [14, 90]
+  RightCorner: [445, 345]
+
+# Matching
+IsReskin: false
+IsShiny: true
+IsGradient: false
+IsAny: false
+IsGood: false
+
+Update:
+  CheckOnStartup: false  # Set to false to disable update checking
+  AutoInstall: false     # Set to true to automatically install updates without prompting
