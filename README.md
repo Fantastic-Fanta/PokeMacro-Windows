@@ -1,53 +1,11 @@
 # PokeMacro
 
-An automated OCR-powered macro for Alpha Modded (PBB on Roblox) that automates the process of hunting Shiny, Gradient, and Reskin Pokemon by soft resetting eggs and monitoring chat notifications.
+An automated OCR-powered macro for Alpha Modded (PBB on Roblox) that automates hunting Shiny, Gradient, and Reskin Pokemon by soft resetting eggs and monitoring chat notifications.
 
-## Overview
-
-PokeMacro automates the hunting process by:
-- Automatically rejoining the game and executing click sequences
-- Using OCR to monitor chat messages for rare Pokemon notifications
-- Detecting Shiny, Gradient, or Reskin Pokemon based on configured criteria
-- Automatically saving the game when matches are found
-- Supporting optional Discord webhook notifications
-- Including automatic update checking from GitHub
-
-## Requirements
-
-- Python 3.10 or higher
-- Windows (primary support; macOS may require additional setup)
-- Internet connection for first-time EasyOCR model download (~100MB)
-- Roblox game window visible and accessible
-
-## Installation
-
-### From Source
-
-1. Clone or download this repository
-
-2. Create a virtual environment (recommended):
-   ```bash
-   python -m venv ENV
-   ENV\Scripts\activate  # Windows
-   # source ENV/bin/activate  # macOS/Linux
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Configure `configs.yaml` (see Configuration section)
-
-5. Run the macro:
-   ```bash
-   python poke_macro_main.py
-   ```
-
-### Pre-built Executable
+## Using Release Files
 
 1. Download `PokeMacro.exe` from releases
-2. Place `configs.yaml` in the same directory
+2. Place `configs.yaml` in the same directory as the executable
 3. Configure `configs.yaml` with your settings
 4. Run `PokeMacro.exe`
 
@@ -55,12 +13,10 @@ Note: EasyOCR will download required models on first run. Internet connection re
 
 ## Configuration
 
-Configuration is done in `configs.yaml`. Default values are examples and must be configured for your setup.
-
-### Configuration Structure
+Edit `configs.yaml` with your settings:
 
 ```yaml
-# Roblox username (display name)
+# Your Roblox username
 Username: "YourUsername"
 
 # Discord webhook URL (optional, leave empty to disable)
@@ -106,44 +62,21 @@ Update:
   AutoInstall: false
 ```
 
-### Matching Modes
+## Matching Criteria
 
-- `IsShiny: true` - Matches Shiny Pokemon only
-- `IsReskin: true` - Matches Reskins from wishlist only
-- `IsGradient: true` - Matches Gradients from wishlist only
-- `IsAny: true` - Matches any Pokemon in Reskins or Gradients wishlist
-- `IsGood: true` - Matches combinations (Reskin+Gradient or Shiny+Gradient)
+The matching mode flags control what the macro detects. Only one flag should be `true` at a time:
 
-Only one matching mode flag should be `true` at a time.
+- **`IsShiny: true`** - Matches Shiny Pokemon only. Detects any Shiny Pokemon regardless of name.
 
-### Distribution Notes
+- **`IsReskin: true`** - Matches Reskins from your wishlist only. Detects Pokemon that are Reskins AND appear in your `Wishlist.Reskins` list.
 
-- Executable size: 200-500MB (includes Python and dependencies)
-- First run: EasyOCR downloads models (~100MB), internet required
-- Config file: Place `configs.yaml` next to `PokeMacro.exe` to customize settings
-  - User config takes precedence over bundled config
-  - Allows editing config without rebuilding
+- **`IsGradient: true`** - Matches Gradients from your wishlist only. Detects Pokemon that are Gradients AND appear in your `Wishlist.Gradients` list.
 
-## Usage
+- **`IsAny: true`** - Matches any Pokemon in your Reskins or Gradients wishlist. Detects Pokemon that appear in either `Wishlist.Reskins` or `Wishlist.Gradients`, regardless of whether they are Shiny.
 
-1. Configure `configs.yaml` with your settings
-2. Ensure Roblox is visible with chat window in configured region
-3. Run: `python poke_macro_main.py` or `PokeMacro.exe`
-4. Stop: Move mouse to top-left corner (failsafe) or press `Ctrl+C`
-
-## Logging
-
-Detected chat messages containing your username are logged to `history.log` (project root or next to executable). This assists with debugging and tracking hunt history.
-
-
-## Important Notes
-
-- Screen coordinates are absolute and resolution-dependent. Reconfigure if resolution changes.
-- Game UI updates may require position adjustments.
-- Test in a safe environment before extended use.
-- `EggManPosition` may require frequent updates.
-- Game window should remain in focus for best results.
-- Internet required for first-time EasyOCR model download.
+- **`IsGood: true`** - Matches "good" combinations. Detects Pokemon that are either:
+  - Reskin + Gradient (both variants)
+  - Shiny + Gradient
 
 ## License
 
@@ -152,7 +85,3 @@ MIT License
 ## Author
 
 Manta
-
----
-
-**Disclaimer**: This tool is for educational purposes. Use responsibly and in accordance with Roblox's Terms of Service.
