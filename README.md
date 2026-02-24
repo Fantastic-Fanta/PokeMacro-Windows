@@ -16,6 +16,8 @@ Verify that all 3 things are there
 
 **3. Save and rejoin, open the `Configs Tool` in the folder**
 Refer to the below images on exactly where to place the points at, please ensure the points are exactly as is because the macro functions off reading color value of pixels
+
+
 <img width="162" height="66" alt="Screenshot 2026-02-25 at 4 44 04 AM" src="https://github.com/user-attachments/assets/0847015a-6cac-49f3-9cc9-7dd112513101" />
 <img width="106" height="63" alt="image" src="https://github.com/user-attachments/assets/bf20b5ef-b10f-4a82-a124-f8ff96a53640" />
 <img width="41.2" height="34.8" alt="image" src="https://github.com/user-attachments/assets/1e0cdb47-8ae0-4620-9adb-56e581232d16" />
