@@ -33,9 +33,9 @@ Enter your name, if your name has any of the following, please get a better name
 
 **5. Fake a Shiny/Whatever to test if it saves**
 Matching criterias:
-IsShiny - stopping at Shiny
-IsReskin - stopping at any Reskin in wishlist (editable in configs)
-IsGradient - stopping at any gradient in wishlist (editable in configs)
-IsAny - stopping at either a Reskin or a Gradient in wishlist
-IsGood - stopping at either a Reskin+Gradient or a Shiny+Gradient (Note: this will NOT stop at Shiny Reskins because there isn't a sprite difference)
+- IsShiny - stopping at Shiny
+- IsReskin - stopping at any Reskin in wishlist (editable in configs)
+- IsGradient - stopping at any gradient in wishlist (editable in configs)
+- IsAny - stopping at either a Reskin or a Gradient in wishlist
+- IsGood - stopping at either a Reskin+Gradient or a Shiny+Gradient (Note: this will NOT stop at Shiny Reskins because there isn't a sprite difference)
 **Always only have 1 critera set to `true` at a time and everything else must be `false`, the only exception of this is when you wish to hunt a Reskin+Gradient only where you can tick both `IsReskin` and `IsGradient`, or if you wish to hunt a Shiny+Reskin+Gradient, then you should tick `IsShiny`, `IsGradient` and `IsReskin` all at once.**
