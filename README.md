@@ -1,6 +1,7 @@
 # Setup Guide
 
 **1. Download the ZIP file from the release called "Main"**
+
 Link: https://github.com/Fantastic-Fanta/PokeMacro-Windows/releases/tag/v1.0.0
 This should contain a ZIP file consisting of
 - `Configs File` (Configuration file to be edited, Configs.yaml)
